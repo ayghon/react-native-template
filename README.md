@@ -1,5 +1,7 @@
 # React Native Template
 
+React Native version supported **0.62+**
+
 This template will setup the following libs:
 
 - [React Navigation](https://reactnavigation.org/)
@@ -7,6 +9,7 @@ This template will setup the following libs:
   - [React Navigation Drawers](https://github.com/react-navigation/react-navigation/tree/main/packages/drawer)
 - [React Native UI Lib](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup)
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 - [React Native Async Storage](https://react-native-async-storage.github.io/async-storage/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [React Native Config](https://github.com/luggit/react-native-config)

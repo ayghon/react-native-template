@@ -13,7 +13,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean:android": "(cd android && ./gradlew clean)",
+    "start:nocache": "npm run start -- --reset-cache"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.3.1",
@@ -21,6 +23,7 @@
     "@react-navigation/native-stack": "^6.6.1",
     "react": "17.0.2",
     "react-native": "0.68.0",
+    "react-native-reanimated": "^2.5.0",
     "react-native-safe-area-context": "^4.2.4",
     "react-native-screens": "^3.13.1"
   },
