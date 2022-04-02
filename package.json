@@ -1,6 +1,9 @@
 {
   "name": "reactnativetemplate",
   "version": "0.0.1",
+  "description": "A React Native template to quickly setup a new project with popular libs",
+  "author": "Aylin Gokalp",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
