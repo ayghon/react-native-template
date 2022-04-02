@@ -16,6 +16,16 @@ This template will setup the following libs:
   > and
   > [native dependencies](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#install-native-dependencies)
   > are not installed
+
+The following tools are also setup:
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://typicode.github.io/husky/#/)
+
+## TODO
+
 - [React Native Async Storage](https://react-native-async-storage.github.io/async-storage/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [Detox](https://wix.github.io/Detox/)
@@ -27,13 +37,6 @@ This template will setup the following libs:
 - [Orval](https://orval.dev/)
 - [React Hooks Form](https://react-hook-form.com/)
 - [Yup](https://github.com/jquense/yup)
-
-The following tools are also setup:
-
-- [Typescript](https://www.typescriptlang.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://typicode.github.io/husky/#/)
 
 > [Create your own template](https://github.com/react-native-community/cli/blob/master/docs/init.md#creating-custom-template)
 
