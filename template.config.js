@@ -4,7 +4,7 @@ module.exports = {
   placeholderName: 'ReactNativeTemplate',
 
   // Directory with template
-  templateDir: './template',
+  templateDir: './',
 
   // Path to script, which will be executed after init
   postInitScript: './script.js',
