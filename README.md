@@ -1,6 +1,6 @@
 # React Native Template
 
-React Native version supported **0.62+**
+React Native version supported **0.63+**
 
 This template will setup the following libs:
 
