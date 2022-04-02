@@ -46,4 +46,3 @@ The following tools are also setup:
 - choose to either have a simple app demonstrating all libs or an empty project
 - Align `@react-navigation/drawers` and `react-native-gesture-handler` versions,
   we use the latest for the second one. This only displays a warning.
-- Test template on iOS
