@@ -1,17 +1,13 @@
 import React from 'react';
-import { Text, View, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
+import { Text, View, Button } from 'react-native-ui-lib';
 
 export function DetailsScreen() {
   const { navigate } = useNavigation();
   return (
-    <View style={styles.screens}>
+    <View flex centerH centerV>
       <Text>Details Screen</Text>
-      <Button title="Go Home" onPress={() => navigate('Home')} />
+      <Button label="Go Home" onPress={() => navigate('Home')} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  screens: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-});

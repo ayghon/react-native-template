@@ -5,11 +5,17 @@ React Native version supported **0.62+**
 This template will setup the following libs:
 
 - [React Navigation](https://reactnavigation.org/)
-  - [React Navigation Bottom Tabs](https://github.com/react-navigation/react-navigation/tree/main/packages/bottom-tabs)
-  - [React Navigation Drawers](https://github.com/react-navigation/react-navigation/tree/main/packages/drawer)
+  > also installs
+  > [React Navigation Bottom Tabs](https://github.com/react-navigation/react-navigation/tree/main/packages/bottom-tabs)
+  > and
+  > [React Navigation Drawers](https://github.com/react-navigation/react-navigation/tree/main/packages/drawer)
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 - [React Native UI Lib](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup)
+  > [optional](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#optional-dependencies)
+  > and
+  > [native dependencies](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#install-native-dependencies)
+  > are not installed
 - [React Native Async Storage](https://react-native-async-storage.github.io/async-storage/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [Detox](https://wix.github.io/Detox/)
