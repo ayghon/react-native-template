@@ -2,6 +2,14 @@
 
 React Native version supported **0.63+**
 
+## How to use
+
+```
+npx react-native init <app-name> --template https://github.com/ayghon/react-native-template.git
+```
+
+## Content
+
 This template will setup the following libs:
 
 - [React Navigation](https://reactnavigation.org/)
