@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.reactnativetemplate">
+  package="com.ReactNativeTemplate">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

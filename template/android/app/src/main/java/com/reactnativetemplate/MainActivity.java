@@ -1,4 +1,4 @@
-package com.reactnativetemplate;
+package com.ReactNativeTemplate;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
