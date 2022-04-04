@@ -31,6 +31,7 @@ The following tools are also setup:
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://typicode.github.io/husky/#/)
+- [Volta](https://docs.volta.sh/guide/)
 
 ## TODO
 
