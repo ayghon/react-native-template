@@ -6,8 +6,10 @@
     "license": "MIT",
     "repository": "git@github.com:ayghon/react-native-template.git",
     "devDependencies": {
+        "@types/inquirer": "^8.2.1",
         "cz-conventional-changelog": "^3.3.0",
-        "husky": "^7.0.4"
+        "husky": "^7.0.4",
+        "inquirer": "^8.2.2"
     },
     "scripts": {
         "prepare": "husky install"
