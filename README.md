@@ -19,11 +19,6 @@ This template will setup the following libs:
   > [React Navigation Drawers](https://github.com/react-navigation/react-navigation/tree/main/packages/drawer)
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
-- [React Native UI Lib](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup)
-  > [optional](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#optional-dependencies)
-  > and
-  > [native dependencies](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#install-native-dependencies)
-  > are not installed
 
 The following tools are also setup:
 
@@ -33,8 +28,13 @@ The following tools are also setup:
 - [Husky](https://typicode.github.io/husky/#/)
 - [Volta](https://docs.volta.sh/guide/)
 
-## TODO
+## Optional libs
 
+- [React Native UI Lib](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup)
+  > [optional](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#optional-dependencies)
+  > and
+  > [native dependencies](https://wix.github.io/react-native-ui-lib/docs/getting-started/setup#install-native-dependencies)
+  > are not installed
 - [React Native Async Storage](https://react-native-async-storage.github.io/async-storage/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [Detox](https://wix.github.io/Detox/)
@@ -47,9 +47,13 @@ The following tools are also setup:
 - [React Hooks Form](https://react-hook-form.com/)
 - [Yup](https://github.com/jquense/yup)
 
-- make some of the libs optional
+
+# TODO 
+
+- create folder structure
 - choose to either have a simple app demonstrating all libs or an empty project
-- Align `@react-navigation/drawers` and `react-native-gesture-handler` versions,
+- align `@react-navigation/drawers` and `react-native-gesture-handler` versions,
   we use the latest for the second one. This only displays a warning.
+- fix template husky hooks firing after project's hooks
 
 > [Create your own template](https://github.com/react-native-community/cli/blob/master/docs/init.md#creating-custom-template)
