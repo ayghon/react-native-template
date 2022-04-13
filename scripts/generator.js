@@ -4,21 +4,25 @@ const fs = require('fs');
 const os = require('os');
 const { execSync } = require("child_process");
 
-const optionalLibraries = {
-  'react-native-ui-lib': '6.13.1',
-  'detox': '19.6.5',
-  'react-native-vector-icons': '9.1.0',
-  'react-native-async-storage': '0.0.1',
-  'react-native-device-info': '8.7.0',
-  'react-native-config': '1.4.5',
-  'react-native-community/hooks': '2.8.1',
-  'react-i18next': '11.16.5',
-  'react-hook-form': '7.29.0',
-  'yup': '0.32.11',
-  'axios': '0.26.1',
-  'react-query': '3.34.19',
-  'orval': '6.7.1',
-}
+const PROJECT_PATH = process.cwd();
+const PACKAGE_JSON_PATH = `${PROJECT_PATH}/package.json`;
+const PROJECT_SRC_PATH = `${PROJECT_PATH}/src`
+
+const OPTIONAL_LIBRARIES = {
+  'react-native-ui-lib': '^6.13.1',
+  'detox': '^19.6.5',
+  'react-native-vector-icons': '^9.1.0',
+  'react-native-async-storage': '^0.0.1',
+  'react-native-device-info': '^8.7.0',
+  'react-native-config': '^1.4.5',
+  'react-native-community/hooks': '^2.8.1',
+  'react-i18next': '^11.16.5',
+  'react-hook-form': '^7.29.0',
+  'yup': '^0.32.11',
+  'axios': '^0.26.1',
+  'react-query': '^3.34.19',
+  'orval': '^6.7.1',
+};
 
 const QUESTIONS = [
   {
@@ -26,36 +30,45 @@ const QUESTIONS = [
     "type": "checkbox",
     default: ['react-native-ui-lib', 'detox', 'react-native-vector-icons', 'axios'],
     "message": "Select libraries to install",
-    "choices": Object.keys(optionalLibraries)
+    "choices": Object.keys(OPTIONAL_LIBRARIES)
   }
-  // TODO handle name change
-  // {
-  //   name: 'name',
-  //   type: 'input',
-  //   default: "MyApp",
-  //   message: 'Project name:'
-  // }
+];
+
+const optionalFolders = [
+  { name: "api", condition: (libs) => libs.includes("orval") || libs.includes("react-query") },
+  { name: "i18n", condition: (libs) => libs.includes('react-i18next') }
 ];
 
 const inquire = (callback) => inquirer.prompt(QUESTIONS)
   .then((answers) => {
-    const projectPath = process.cwd();
-    const projectPackageJson = JSON.parse(fs.readFileSync(`${projectPath}/package.json`));
-
-    const newPackageJson = {
-      ...projectPackageJson,
-      // name: answers.name,
-      dependencies: {
-        ...projectPackageJson.dependencies,
-        ...answers.libraries.reduce((acc, it) => ({ ...acc, [it]: optionalLibraries[it] }), {})
-      }
+    let newPackageJson;
+    try {
+      const projectPackageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH));
+      newPackageJson = {
+        ...projectPackageJson,
+        dependencies: {
+          ...projectPackageJson.dependencies,
+          ...answers.libraries.reduce((acc, it) => ({ ...acc, [it]: OPTIONAL_LIBRARIES[it] }), {})
+        }
+      };
+    } catch (error) {
+      throw new Error(`Unable to parse package.json: ${PACKAGE_JSON_PATH}`);
     }
 
-    // change app name + add new libs to dependencies
-    fs.writeFileSync(`${projectPath}/package.json`, JSON.stringify(newPackageJson, null, 2) + os.EOL);
+    // add folders in src for selected optional libs
+    optionalFolders.forEach(({ name, condition }) => {
+      if (condition(answers.libraries)) {
+        const newDir = `${PROJECT_SRC_PATH}/${name}`
+        fs.mkdirSync(newDir);
+        fs.writeFileSync(`${newDir}/.gitkeep`, "");
+      }
+    })
+
+    // add new libs to dependencies
+    fs.writeFileSync(PACKAGE_JSON_PATH, JSON.stringify(newPackageJson, null, 2) + os.EOL);
 
     // init git repo to install hooks with husky
-    execSync(`git init "${projectPath}"`);
+    execSync(`git init "${PROJECT_PATH}"`);
 
     callback();
   });

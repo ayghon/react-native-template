@@ -6,10 +6,10 @@ const spinner = ora('Optional libraries setup');
 
 new Promise((resolve) => {
   spinner.start();
-  inquire(resolve);
+  inquire(resolve)
 }).then(() => {
   spinner.succeed();
-}).catch(() => {
-  spinner.fail();
+}).catch((error) => {
+  spinner.fail(error);
   throw new Error('Something went wrong during the post init script execution');
 });
