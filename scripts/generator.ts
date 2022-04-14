@@ -1,14 +1,13 @@
-// TODO use typescript
-const inquirer = require('inquirer');
-const fs = require('fs');
-const os = require('os');
-const { execSync } = require("child_process");
+import inquirer from 'inquirer';
+import fs from 'fs';
+import os from 'os';
+import { execSync } from "child_process";
 
 const PROJECT_PATH = process.cwd();
 const PACKAGE_JSON_PATH = `${PROJECT_PATH}/package.json`;
 const PROJECT_SRC_PATH = `${PROJECT_PATH}/src`
 
-const OPTIONAL_LIBRARIES = {
+const OPTIONAL_LIBRARIES: Record<string, string> = {
   'react-native-ui-lib': '^6.13.1',
   'detox': '^19.6.5',
   'react-native-vector-icons': '^9.1.0',
@@ -24,7 +23,7 @@ const OPTIONAL_LIBRARIES = {
   'orval': '^6.7.1',
 };
 
-const QUESTIONS = [
+const QUESTIONS: inquirer.QuestionCollection<{ libraries: string[] }> = [
   {
     name: "libraries",
     "type": "checkbox",
@@ -34,16 +33,16 @@ const QUESTIONS = [
   }
 ];
 
-const optionalFolders = [
+const optionalFolders: { name: string; condition: (libs: string[]) => boolean }[] = [
   { name: "api", condition: (libs) => libs.includes("orval") || libs.includes("react-query") },
   { name: "i18n", condition: (libs) => libs.includes('react-i18next') }
 ];
 
-const inquire = (callback) => inquirer.prompt(QUESTIONS)
+const inquire = (callback: (value: unknown) => void) => inquirer.prompt(QUESTIONS)
   .then((answers) => {
     let newPackageJson;
     try {
-      const projectPackageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH));
+      const projectPackageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH, { encoding: 'utf8' }));
       newPackageJson = {
         ...projectPackageJson,
         dependencies: {
@@ -70,9 +69,9 @@ const inquire = (callback) => inquirer.prompt(QUESTIONS)
     // init git repo to install hooks with husky
     execSync(`git init "${PROJECT_PATH}"`);
 
-    callback();
+    callback(true);
   });
 
-module.exports = {
+export {
   inquire
 }

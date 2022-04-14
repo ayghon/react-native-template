@@ -8,6 +8,11 @@ React Native version supported **0.63+**
 npx react-native init <app-name> --template https://github.com/ayghon/react-native-template.git
 ```
 
+## Requirements
+
+- ts-node
+- [environment setup](https://reactnative.dev/docs/environment-setup) for react-native
+
 ## Content
 
 This template will setup the following libs:
@@ -46,7 +51,6 @@ The following tools are also setup:
 - [Orval](https://orval.dev/)
 - [React Hooks Form](https://react-hook-form.com/)
 - [Yup](https://github.com/jquense/yup)
-
 
 # TODO 
 

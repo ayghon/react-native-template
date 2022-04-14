@@ -1,6 +1,6 @@
-#!/usr/bin/env node
-const ora = require('ora');
-const { inquire } = require("./generator");
+#!/usr/bin/env ts-node
+import ora from 'ora';
+import { inquire } from './generator';
 
 const spinner = ora('Optional libraries setup');
 
