@@ -58,5 +58,6 @@ The following tools are also setup:
 - align `@react-navigation/drawers` and `react-native-gesture-handler` versions,
   we use the latest for the second one. This issue only displays a warning in dev mode
 - fix template husky hooks firing after project's hooks
+- migrate from inquirer package to enquirer
 
 > [Create your own template](https://github.com/react-native-community/cli/blob/master/docs/init.md#creating-custom-template)
