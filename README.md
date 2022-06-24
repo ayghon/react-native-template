@@ -11,7 +11,8 @@ npx react-native init <app-name> --template https://github.com/ayghon/react-nati
 ## Requirements
 
 - ts-node
-- [environment setup](https://reactnative.dev/docs/environment-setup) for react-native
+- [environment setup](https://reactnative.dev/docs/environment-setup) for
+  react-native
 
 ## Content
 
@@ -52,11 +53,11 @@ The following tools are also setup:
 - [React Hooks Form](https://react-hook-form.com/)
 - [Yup](https://github.com/jquense/yup)
 
-# TODO 
+# TODO
 
 - choose to either have a simple app demonstrating all libs or an empty project
 - align `@react-navigation/drawers` and `react-native-gesture-handler` versions,
-  we use the latest for the second one. This issue only displays a warning in dev mode
-- fix template husky hooks firing after project's hooks
+  we use the latest for the second one. This issue only displays a warning in
+  dev mode
 
 > [Create your own template](https://github.com/react-native-community/cli/blob/master/docs/init.md#creating-custom-template)
