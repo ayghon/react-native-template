@@ -18,5 +18,8 @@
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         }
+    },
+    "dependencies": {
+        "ora": "^6.1.0"
     }
 }
