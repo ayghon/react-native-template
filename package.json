@@ -8,8 +8,7 @@
     "devDependencies": {
         "@types/inquirer": "^8.2.1",
         "cz-conventional-changelog": "^3.3.0",
-        "husky": "^7.0.4",
-        "inquirer": "^8.2.2"
+        "husky": "^7.0.4"
     },
     "scripts": {
         "prepare": "husky install"
@@ -20,6 +19,7 @@
         }
     },
     "dependencies": {
-        "ora": "^6.1.0"
+        "inquirer": "^8.2.2",
+        "ora": "^5.4.1"
     }
 }
