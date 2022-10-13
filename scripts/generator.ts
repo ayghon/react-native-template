@@ -8,19 +8,19 @@ const PACKAGE_JSON_PATH = `${PROJECT_PATH}/package.json`;
 const PROJECT_SRC_PATH = `${PROJECT_PATH}/src`
 
 const OPTIONAL_LIBRARIES: Record<string, string> = {
-  'react-native-ui-lib': '^6.13.1',
-  'detox': '^19.6.5',
-  'react-native-vector-icons': '^9.1.0',
+  'react-native-ui-lib': '^6.21.2',
+  'detox': '^19.12.5',
+  'react-native-vector-icons': '^9.2.0',
   'react-native-async-storage': '^0.0.1',
-  'react-native-device-info': '^8.7.0',
-  'react-native-config': '^1.4.5',
+  'react-native-device-info': '^10.2.1',
+  'react-native-config': '^1.4.11',
   'react-native-community/hooks': '^2.8.1',
-  'react-i18next': '^11.16.5',
-  'react-hook-form': '^7.29.0',
+  'react-i18next': '^11.18.6',
+  'react-hook-form': '^7.37.0',
   'yup': '^0.32.11',
-  'axios': '^0.26.1',
-  'react-query': '^3.34.19',
-  'orval': '^6.7.1',
+  'axios': '^1.1.2',
+  'react-query': '^3.39.2',
+  'orval': '^6.10.2',
 };
 
 const QUESTIONS: inquirer.QuestionCollection<{ libraries: string[] }> = [

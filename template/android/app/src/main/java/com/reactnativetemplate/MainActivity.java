@@ -1,4 +1,4 @@
-package com.ReactNativeTemplate;
+package com.reactnativetemplate;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
@@ -6,6 +6,10 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 
 public class MainActivity extends ReactActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
@@ -18,7 +22,8 @@ public class MainActivity extends ReactActivity {
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
-   * you can specify the rendered you wish to use (Fabric or the older renderer).
+   * you can specify the renderer you wish to use - the new renderer (Fabric) or the old renderer
+   * (Paper).
    */
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
@@ -37,10 +42,12 @@ public class MainActivity extends ReactActivity {
       reactRootView.setIsFabric(BuildConfig.IS_NEW_ARCHITECTURE_ENABLED);
       return reactRootView;
     }
-  }
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(null);
+    @Override
+    protected boolean isConcurrentRootEnabled() {
+      // If you opted-in for the New Architecture, we enable Concurrent Root (i.e. React 18).
+      // More on this on https://reactjs.org/blog/2022/03/29/react-v18.html
+      return BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
+    }
   }
 }

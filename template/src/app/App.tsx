@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native-ui-lib';
+import { Text, SafeAreaView } from 'react-native';
 
 const App = () => {
   return (
-    <View centerH centerV flex>
+    <SafeAreaView>
       <Text>React Native Template</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
