@@ -1,7 +1,5 @@
 # React Native Template
 
-React Native version supported **0.63+**
-
 ## How to use
 
 ```
@@ -52,12 +50,5 @@ The following tools are also setup:
 - [Orval](https://orval.dev/)
 - [React Hooks Form](https://react-hook-form.com/)
 - [Yup](https://github.com/jquense/yup)
-
-# TODO
-
-- choose to either have a simple app demonstrating all libs or an empty project
-- align `@react-navigation/drawers` and `react-native-gesture-handler` versions,
-  we use the latest for the second one. This issue only displays a warning in
-  dev mode
 
 > [Create your own template](https://github.com/react-native-community/cli/blob/master/docs/init.md#creating-custom-template)
