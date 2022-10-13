@@ -7,7 +7,8 @@
   "repository": "git@github.com:ayghon/react-native-template.git",
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "semantic-release": "^19.0.5"
   },
   "scripts": {
     "prepare": "husky install"
